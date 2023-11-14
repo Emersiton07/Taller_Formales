@@ -1,0 +1,7 @@
+rm 2.tab.* lex.yy.c calc.exe
+
+bison -d 2.y
+flex 2.l
+gcc 2.tab.c lex.yy.c -lfl -o calc.exe 
+
+./calc.exe
